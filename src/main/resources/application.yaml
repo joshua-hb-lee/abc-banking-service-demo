@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: banking-service
+
+  config:
+    import:
+      - optional:aws-secretsmanager:demo/app
+
+  datasource:
+    url: jdbc:mysql://${dbHost}:3306/abc_bank?serverTimezone=UTC&characterEncoding=UTF-8
+    username: ${dbUsername}
+    password: ${dbPassword}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      # Tables are created by DDL.md; `validate` fails fast if entities drift from the schema.
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+banking:
+  security:
+    encryption:
+      # Base64-encoded 256-bit AES key used for field-level AES-GCM encryption.
+      # Sourced from AWS Secrets Manager (demo/app -> encryptionKey); startup fails if it is absent.
+      aes-key: ${encryptionKey:}
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    com.zaxxer.hikari.HikariConfig: DEBUG
