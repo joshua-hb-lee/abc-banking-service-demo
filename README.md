@@ -8,4 +8,4 @@ decryption.
 Additionally, it's also configured AWS Secrets Manager to securely get sensitive information for the
 application configuration.
 
-- `DDL.md`: contains the database schema and tables
+- [`DDL.md`](https://github.com/joshua-hb-lee/abc-banking-service-demo/blob/main/DDL.md): contains the database schema and tables
