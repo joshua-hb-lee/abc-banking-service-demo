@@ -1,6 +1,8 @@
 # ABC Banking Service Demo
 
-Part 3. Data Protection and Lifecycle
+## Part 3. Data Protection and Lifecycle
+
+<img width="762" height="552" alt="Image" src="https://github.com/user-attachments/assets/5f370022-8f38-4c5e-937b-7b73c1b46317" />
 
 This project was focusing on demonstrating the data protection in terms of encryption and
 decryption.
