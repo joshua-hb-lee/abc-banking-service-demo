@@ -11,3 +11,4 @@ Additionally, it's also configured AWS Secrets Manager to securely get sensitive
 application configuration.
 
 - [`DDL.md`](https://github.com/joshua-hb-lee/abc-banking-service-demo/blob/main/DDL.md): contains the database schema and tables
+- [`AesGcmEncryptor`](https://github.com/joshua-hb-lee/abc-banking-service-demo/blob/main/src/main/java/dev/uts/hanbin/banking/crypto/AesGcmEncryptor.java): encryption and decryption with AES-GCM algorithm (symmetric)
